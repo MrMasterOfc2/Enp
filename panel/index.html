@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | E Nena Piyasa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css"><link rel="stylesheet" href="css/panel.css"><link rel="stylesheet" href="../assets/css/extras.css"><link rel="stylesheet" href="../assets/css/blog.css"><link rel="stylesheet" href="../assets/css/theme-fixes.css"><link rel="stylesheet" href="../assets/css/responsive.css"><link rel="stylesheet" href="css/pin.css">
+</head>
+<body class="panel-body">
+  <div class="preloader" id="preloader" aria-label="Loading E Nena Piyasa">
+    <div class="preloader-core"><div class="preloader-rings"><span></span><span></span><b>E</b></div><strong>E Nena Piyasa</strong><small>Opening administration center</small><div class="preloader-line"><i></i></div><em id="preloaderPercent">0%</em></div>
+  </div>
+  <section class="pin-gate" id="pinGate">
+    <div class="pin-card">
+      <a class="brand" href="../index.html"><span class="brand-mark">E</span><span><strong>E Nena Piyasa</strong><small>Secure administration</small></span></a>
+      <div class="pin-lock"><span>●</span></div><span class="pin-eyebrow">Admin access</span>
+      <h1>Enter your secure PIN</h1><p>Use your four-digit administration PIN to continue.</p>
+      <form id="pinForm"><div class="pin-digits"><input inputmode="numeric" maxlength="1" aria-label="PIN digit 1" required><input inputmode="numeric" maxlength="1" aria-label="PIN digit 2" required><input inputmode="numeric" maxlength="1" aria-label="PIN digit 3" required><input inputmode="numeric" maxlength="1" aria-label="PIN digit 4" required></div><small id="pinError"></small><button class="btn btn-primary" type="submit">Unlock admin panel <span>→</span></button></form>
+      <a class="pin-back" href="../index.html">← Return to website</a>
+    </div>
+  </section>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand panel-brand" href="../index.html"><span class="brand-mark">E</span><span><strong>E Nena Piyasa</strong><small>Administration</small></span></a>
+    <nav>
+      <button class="active" data-view="dashboard"><span>⌂</span> Overview</button>
+      <button data-view="teachers"><span>♙</span> Teachers</button>
+      <button data-view="blogs"><span>▤</span> Blog posts</button>
+      <button data-view="feedback"><span>✉</span> Feedback <i id="feedbackBadge">0</i></button>
+      <button data-view="chats"><span>◌</span> Chat messages</button>
+    </nav>
+    <div class="sidebar-foot"><a href="../index.html">↗ View website</a><button id="logout">↪ Sign out</button></div>
+  </aside>
+  <main class="panel-main">
+    <header class="panel-header"><button class="panel-menu" id="panelMenu">☰</button><div><small>Friday, 12 June 2026</small><h1 id="pageTitle">Dashboard overview</h1></div><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="sun">☀</span><span class="moon">☾</span></button><div class="admin-profile"><span>A</span><p><strong>Administrator</strong><small>Super admin</small></p></div></header>
+    <section class="panel-view active" id="dashboard">
+      <div class="welcome"><div><span>Welcome back, Admin</span><h2>Here's what's happening<br>at E Nena Piyasa.</h2><p>Manage your center and keep an eye on student engagement.</p></div><div class="welcome-mark">E<small>NP</small></div></div>
+      <div class="metric-grid">
+        <article><div class="metric-icon blue">♙</div><p><span>Total teachers</span><strong id="teacherCount">0</strong><small>Active instructors</small></p></article>
+        <article><div class="metric-icon green">✉</div><p><span>New feedback</span><strong id="feedbackCount">0</strong><small>Needs your attention</small></p></article>
+        <article><div class="metric-icon purple">◌</div><p><span>Chat messages</span><strong id="chatCount">0</strong><small>Conversation history</small></p></article>
+        <article><div class="metric-icon orange">◎</div><p><span>Registered users</span><strong id="userCount">0</strong><small>Student accounts</small></p></article>
+      </div>
+      <div class="dashboard-grid"><article class="panel-card"><div class="card-head"><div><h3>Recent feedback</h3><p>Latest messages from the website</p></div><button data-jump="feedback">View all</button></div><div id="recentFeedback"></div></article><article class="panel-card quick-card"><div class="card-head"><div><h3>Quick actions</h3><p>Common management tasks</p></div></div><button data-jump="teachers">＋ Add a new teacher <span>→</span></button><button data-jump="feedback">✉ Review feedback <span>→</span></button><button data-jump="chats">◌ Manage chat history <span>→</span></button></article></div>
+    </section>
+    <section class="panel-view" id="teachers">
+      <div class="view-head"><div><h2>Teacher management</h2><p>Add or update the instructors shown on the website.</p></div><button class="btn btn-primary" id="addTeacher">＋ Add teacher</button></div>
+      <div class="teacher-table panel-card" id="teacherTable"></div>
+    </section>
+    <section class="panel-view" id="feedback">
+      <div class="view-head"><div><h2>Feedback inbox</h2><p>Messages submitted through the website contact form.</p></div><button class="btn btn-outline" id="markRead">Mark all as read</button></div>
+      <div class="feedback-list" id="feedbackList"></div>
+    </section>
+    <section class="panel-view" id="blogs">
+      <div class="view-head"><div><h2>Blog management</h2><p>Publish news, learning tips, and center updates.</p></div><button class="btn btn-primary" id="addBlog">＋ New article</button></div>
+      <div class="blog-admin-grid" id="blogAdminGrid"></div>
+    </section>
+    <section class="panel-view" id="chats">
+      <div class="view-head"><div><h2>Website chat</h2><p>Review or clear the current chat transcript.</p></div><button class="btn danger" id="clearChats">Clear all chats</button></div>
+      <div class="chat-admin panel-card" id="chatAdmin"></div>
+    </section>
+  </main>
+  <div class="modal" id="teacherModal"><form class="modal-card" id="teacherForm"><div class="modal-head"><div><h3 id="modalTitle">Add teacher</h3><p>Details will appear on the public website.</p></div><button type="button" id="closeModal">×</button></div><input type="hidden" name="id"><input type="hidden" name="photo"><label class="photo-upload"><span class="photo-preview" id="photoPreview">Photo</span><span><strong>Profile picture</strong><small>Upload JPG, PNG or WebP</small><input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp"></span></label><label>Full name<input name="name" required placeholder="Teacher name"></label><label>Job title<input name="role" required placeholder="Technology Instructor"></label><label>Initials<input name="initials" maxlength="3" required placeholder="AS"></label><label>Short bio<textarea name="bio" rows="3" required placeholder="A short introduction"></textarea></label><label>Skills <small>Separate using commas</small><input name="skills" required placeholder="Web Development, Programming"></label><button class="btn btn-primary" type="submit">Save teacher</button></form></div>
+  <div class="modal" id="blogEditorModal"><form class="modal-card blog-editor" id="blogForm"><div class="modal-head"><div><h3 id="blogEditorTitle">New blog article</h3><p>Published posts will appear on the public website.</p></div><button type="button" id="closeBlogEditor">×</button></div><input type="hidden" name="id"><input type="hidden" name="image"><label class="photo-upload"><span class="blog-image-preview" id="blogImagePreview">Cover</span><span><strong>Cover image</strong><small>Upload JPG, PNG or WebP under 2MB</small><input type="file" id="blogImageInput" accept="image/jpeg,image/png,image/webp"></span></label><label>Article title<input name="title" required placeholder="Enter article title"></label><label>Category<input name="category" required placeholder="Learning"></label><label>Author<input name="author" required placeholder="Author name"></label><label>Status<select name="status"><option>Published</option><option>Draft</option></select></label><label class="wide-field">Short excerpt<textarea name="excerpt" rows="2" required placeholder="Short description shown on the blog card"></textarea></label><label class="wide-field">Article content<textarea name="content" rows="7" required placeholder="Write the full article content"></textarea></label><button class="btn btn-primary" type="submit">Save article</button></form></div>
+  <div class="toast" id="toast"></div>
+  <script src="../assets/js/config/firebase-config.js"></script><script src="../assets/js/app.js"></script><script src="../assets/js/firebase-sync.js"></script><script src="js/admin.js"></script>
+</body>
+</html>
