@@ -1,0 +1,7 @@
+.vercel
+.firebase
+node_modules
+*.log
+*-check.png
+
+.vercel

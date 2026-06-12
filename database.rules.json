@@ -1,0 +1,24 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "enp": {
+      "teachers": {
+        ".read": true,
+        ".write": true
+      },
+      "blogs": {
+        ".read": true,
+        ".write": true
+      },
+      "chats": {
+        ".read": true,
+        ".write": true
+      },
+      "feedback": {
+        ".read": true,
+        ".write": true
+      }
+    }
+  }
+}
