@@ -1,0 +1,26 @@
+/* Consistent text contrast across light and dark themes */
+:root{--surface:#fff;--surface-soft:#f7fbff;--text-strong:#0b1b36;--text-body:#52647b;--text-soft:#77879c;--field:#fafdff;--field-text:#243650;--placeholder:#98a8bb}
+body,h1,h2,h3,h4,strong{color:var(--text-strong)}p,label,span,small{transition:color .2s}input,select,textarea{color:var(--field-text)}input::placeholder,textarea::placeholder{color:var(--placeholder);opacity:1}
+.course-card p,.teacher-info p,.blog-copy p,.about-copy>p,.section-heading p,.hero-copy>p,.view-head p,.card-head p,.feedback-item>p,.blog-admin-card p{color:var(--text-body)}
+.course-meta,.teacher-skills span,.blog-meta,.metric-grid span,.metric-grid small,.table-person small,.modal-head p,.modal-card label small{color:var(--text-soft)}
+.feedback-form label,.modal-card label,.auth-view label{color:var(--text-body)}
+.panel-card,.metric-grid article,.feedback-item,.modal-card,.blog-card,.course-card,.teacher-card{color:var(--text-strong)}
+.contact-section h2,.contact-section strong,.welcome h2,.welcome strong,.sidebar strong,.pin-card h1,.pin-card strong,.auth-promo h1,.auth-promo strong,.chat-widget header strong,footer strong,footer .brand strong{color:#fff}
+
+[data-theme=dark]{--surface:#0d223d;--surface-soft:#091a30;--text-strong:#edf5ff;--text-body:#b6c7dc;--text-soft:#91a6c1;--field:#091a30;--field-text:#e8f1ff;--placeholder:#748ba8;--muted:#a7bad1;--line:#284362}
+[data-theme=dark] body,[data-theme=dark] h1,[data-theme=dark] h2,[data-theme=dark] h3,[data-theme=dark] h4,[data-theme=dark] strong{color:var(--text-strong)}
+[data-theme=dark] p,[data-theme=dark] label,[data-theme=dark] small,[data-theme=dark] .course-card p,[data-theme=dark] .teacher-info p,[data-theme=dark] .blog-copy p,[data-theme=dark] .blog-admin-card p,[data-theme=dark] .feedback-item>p{color:var(--text-body)}
+[data-theme=dark] input,[data-theme=dark] select,[data-theme=dark] textarea{color:var(--field-text)!important;background:var(--field)!important;border-color:var(--line)!important}
+[data-theme=dark] input::placeholder,[data-theme=dark] textarea::placeholder{color:var(--placeholder)}
+[data-theme=dark] select option{color:var(--field-text);background:var(--surface)}
+[data-theme=dark] .nav-links>a:not(.btn),[data-theme=dark] .course-meta,[data-theme=dark] .blog-meta,[data-theme=dark] .table-row,[data-theme=dark] .view-head p,[data-theme=dark] .card-head p,[data-theme=dark] .modal-head p,[data-theme=dark] .metric-grid span,[data-theme=dark] .metric-grid small{color:var(--text-soft)}
+[data-theme=dark] .auth-view label,[data-theme=dark] .auth-heading p,[data-theme=dark] .back-link,[data-theme=dark] .divider,[data-theme=dark] .demo-note{color:var(--text-body)}
+[data-theme=dark] .auth-tabs button{color:#9eb2cb}[data-theme=dark] .auth-tabs button.active{color:#78b9ff}
+[data-theme=dark] .quick-card>button,[data-theme=dark] .icon-btn{color:#b7cae0;background:#102947;border-color:var(--line)}
+[data-theme=dark] .table-row,[data-theme=dark] .feedback-row,[data-theme=dark] .panel-header{border-color:var(--line)}
+[data-theme=dark] .status{background:#12365c;color:#85c4ff}[data-theme=dark] .danger,[data-theme=dark] .icon-btn.delete{color:#ff9b9b;border-color:#70404a}
+[data-theme=dark] .blog-image b{color:#80bfff}[data-theme=dark] .course-card>a,[data-theme=dark] .blog-copy button{color:#70b6ff}
+[data-theme=dark] .message:not(.user){color:var(--text-body)}[data-theme=dark] .message.user{color:#fff}
+[data-theme=dark] .feedback-form h3,[data-theme=dark] .feedback-form label,[data-theme=dark] .chat-widget,[data-theme=dark] .modal-card{color:var(--text-strong)}
+[data-theme=dark] .btn-primary,[data-theme=dark] .btn-primary span,[data-theme=dark] .contact-section h2,[data-theme=dark] .contact-section strong,[data-theme=dark] footer strong{color:#fff}
+[data-theme=dark] .admin-profile strong,[data-theme=dark] .table-person strong,[data-theme=dark] .feedback-top strong,[data-theme=dark] .feedback-row strong{color:var(--text-strong)}
